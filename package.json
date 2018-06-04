@@ -25,6 +25,7 @@
     "@swimlane/ngx-charts": "^8.0.2",
     "chart.js": "^2.7.2",
     "core-js": "^2.5.4",
+    "foreman": "3.0.0",
     "ng-simple-slideshow": "^1.2.2",
     "rxjs": "^6.2.0",
     "rxjs-compat": "^6.2.0",
