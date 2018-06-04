@@ -2,8 +2,8 @@ const express = require('express');
 const path = require('path');
 const app = express();
  
-app.use(express.static('build'));
+app.use(express.static(__dirname + '/dist/finalfootball'));
 app.get('/*', function(req,res) {    
-res.sendFile(path.join('index.html'));
+res.sendFile(path.join(__dirname+'/dist/finalfootball/index.html'));
 });
 app.listen(process.env.PORT || 8080);
