@@ -1,0 +1,60 @@
+<section id="team" class="season-detail">
+    <h4 > Head2Head Results</h4>
+	<div id="h2h"> 
+	<table class="table " border="1" >
+		<thead>
+
+			<th>Team</th>
+			<th>Win</th>
+			<th>Draw</th>
+			<th>Total Match Played</th>
+		</thead>
+		<tbody>
+			<tr style="border: 1px solid">
+				<td> {{headtohead.fixture.awayTeamName}}</td>
+				<td> {{headtohead.head2head.awayTeamWins}}</td>
+				
+				<td rowspan="2">{{headtohead.head2head.draws}}</td>
+				<td rowspan="2">{{headtohead.head2head.count}}</td>
+			</tr>
+			<tr>
+				<td>{{headtohead.fixture.homeTeamName}}</td>
+				<td>{{headtohead.head2head.homeTeamWins}}</td>
+			</tr>
+		</tbody>
+	</table>
+	</div>
+	<div class="date-match"  id="table-scroll">
+		<div class="resultPanelRow table-responsive" *ngFor="let result of headtohead.head2head.fixtures">
+			<table class="table" border="1" >
+				<thead>
+					<th>
+						Date
+					</th>
+					<th>Matches</th>
+				</thead>
+				<tbody>
+					<tr >
+						<td >{{result.date | date:'yyyy/MM/dd'}}</td>
+						<td >
+							<span>{{result.awayTeamName}} <span>{{result.result.goalsAwayTeam}}</span></span> - <span>{{result.result.goalsHomeTeam}} <span>{{result.homeTeamName}}</span></span>
+						</td>
+					</tr>
+
+				</tbody>
+				
+			</table>
+	</div>
+	</div>
+
+	<ngx-charts-pie-chart *ngIf = "chartdata"
+      [view]="view"
+      [scheme]="colorScheme"
+      [results]="countryData"
+      [legend]="showLegend"
+      [explodeSlices]="explodeSlices"
+      [labels]="showLabels"
+      [doughnut]="doughnut"
+      (select)="onSelect($event)">
+    </ngx-charts-pie-chart>
+</section>

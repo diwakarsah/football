@@ -1,0 +1,50 @@
+.season-detail {
+    border: 1px solid #c2bfba;
+    margin-top: 20px;
+}
+.date-match table{
+	font-size: 15px;
+	background: #e3e5e6;
+}
+
+.date-match th{
+	padding:8px;
+	background-color:	#bfbfbf;
+	color:#081f2c;
+	text-align: center;
+}
+
+.date-match table tr {
+    background: #e3e5e6;
+    border-top: 1px solid #fff;
+}
+
+.date-match td {
+    vertical-align: middle;
+    border: none;
+}
+
+.team-name {
+    font-weight: 500px;
+    display: inline-block;
+    font-size: 16px;
+}
+
+.goals{
+    border: 1px solid #838f95;
+    background-color: #fff;
+    padding: 5px 13px;
+    display: inline-block;
+    margin: 9px;
+    color: #000;
+}
+#table-scroll {
+    height:200px;
+    width: 50%;
+    overflow:auto;  
+    margin-top:20px;
+    border: 1px solid #c2bfba;
+    background:#e3e5e6;
+    margin-right: auto;
+    margin-left: auto;
+}

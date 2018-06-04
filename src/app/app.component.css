@@ -1,0 +1,14 @@
+.content-container {
+    padding: 10px;
+    border: 1px solid #c2bfba;
+    border-radius: 5px;
+    box-shadow:0 0 5px #ccc;
+    font-family: 'Roboto', sans-serif;
+}
+.content-container h2, .content-container h3,.content-container h4,.content-container h5{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+}
+.grid-item {
+    
+}

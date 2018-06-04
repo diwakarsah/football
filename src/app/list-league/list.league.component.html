@@ -1,0 +1,31 @@
+<h2>Leagues</h2>
+<div id="table-wrapper">
+    <div id="table-scroll">
+      
+        <table class="table">
+            <thead>
+                    <th>Caption</th>
+                    <th>League</th>
+                    <th> Number of Games</th>
+                </thead>
+            <tbody *ngIf = "competitionList">
+                
+                <tr *ngFor="let competition of competitionList">
+                    <td (click)="leagueTableLink(competition._links.leagueTable.href)">
+                    {{competition.caption}}</td>
+                 <td (click)="leagueTableLink(competition._links.leagueTable.href)">{{competition.league}}</td>
+                <td>{{competition.numberOfGames}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<app-league-table [leagueTable]="leagueTableList" class="grid-item"></app-league-table>
+<br/>
+<br/>
+
+<div *ngIf = "chart">
+    <canvas id="canvas">{{ chart }}</canvas> 
+</div>
+

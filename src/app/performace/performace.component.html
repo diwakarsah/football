@@ -1,0 +1,23 @@
+
+<section id="team" class="season-detail" >
+	 <h4 style="margin-bottom: 10px">Performance Over Last 5 Games</h4>
+<section class="date-match" id="table-scroll" >             
+                <div class="resultPanelRow table-responsive" *ngFor="let season of performance" >
+                    <table border="1" class="table">
+                        <tr >
+                            <th colspan="5">
+                                <b>Date: </b> {{season.date | date:'yyyy/MM/dd'}}
+                            </th>
+                        </tr>
+                        <tr>
+                            <td>{{season.homeTeamName}} :</td>
+                            <td>{{season.result.goalsHomeTeam}} </td>
+                            <td> vs </td>
+                            <td>{{season.result.goalsAwayTeam}}</td>
+                            <td>: {{season.awayTeamName}}</td>
+                        </tr>
+                    </table>
+                </div>
+            
+        </section>
+    </section>

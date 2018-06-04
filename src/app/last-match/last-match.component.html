@@ -1,0 +1,28 @@
+
+
+<section id="team"  class="detail-content" >
+	<h3>Team Details</h3>
+	<h4>Last Match Result </h4>
+
+	<section class="date-team">
+		
+		<div class="date"> <span>Date: </span><span> {{lastMatch.fixtures[(lastMatch.count)-1].date}}</span></div>
+		<div class="scoreboard">
+			<span>
+				<span class="team-name"> {{lastMatch.fixtures[(lastMatch.count)-1].homeTeamName}}</span>
+				<span class="goals">{{lastMatch.fixtures[(lastMatch.count)-1].result.goalsHomeTeam}}</span>
+			
+			</span> 
+			<span>vs</span> 
+			<span>
+				
+					<span class="goals">{{lastMatch.fixtures[(lastMatch.count)-1].result.goalsAwayTeam}}</span>
+					<span class="team-name">{{lastMatch.fixtures[(lastMatch.count)-1].awayTeamName}}</span>
+			</span>
+		</div>
+	</section>
+</section>
+
+
+
+

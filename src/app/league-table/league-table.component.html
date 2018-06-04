@@ -1,0 +1,52 @@
+<section *ngIf = "leagueTable">
+<h2>League Table</h2>
+<div id="table-wrapper" class="second-table">
+   <div id="table-scroll" >
+    <h3>{{leagueTable.leagueCaption}}</h3>
+    <table  class="table">
+
+      <thead >
+                <th>P</th>
+                <th >Team</th>
+                <th>GP</th>
+                <th>W</th>
+                <th>D</th>
+                <th>L</th>
+                <th>F</th>
+                <th>A</th>
+                <th>GD</th>
+                <th>Pts</th> 
+      </thead>
+      <tbody >
+        <tr *ngFor="let team of leagueTable.standing" (click)="TeamsInfo(team._links.team.href)">
+          <td>{{team.position}}</td>
+          <td><img src={{team.crestUrl}} /> {{team.teamName}}</td>
+          <td>{{team.playedGames}}</td>
+          <td>{{team.wins}}</td>
+          <td>{{team.draws}}</td>
+           <td>{{team.losses}}</td>
+           <td>{{team.goals}}</td>
+           <td>{{team.goalsAgainst}}</td>
+          <td>{{team.goalDifference}}</td>
+          <td>{{team.points}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+</section>
+<div *ngIf = "fixtures"> 
+<app-last-match [lastMatch]="fixtures" class="grid-item"></app-last-match>
+<app-performace [lastMatch]="fixtures" class="grid-item"></app-performace>
+<app-season [lastMatch]="fixtures" class="grid-item"></app-season>
+
+<!--<section class="flex-container">  
+        <section id="performance">
+            <app-performace [lastMatch]="fixtures" class="grid-item"></app-performace>
+        </section>
+
+        <section id="season">
+          <app-season [lastMatch]="fixtures" class="grid-item"></app-season>
+        </section>
+</section> -->
+</div>

@@ -1,0 +1,27 @@
+ 
+<section id="team" class="season-detail">
+    <h4 > Season Performance</h4>
+<section  class="date-match" id="table-scroll">  
+                <div class="resultPanelRow table-responsive" *ngFor="let season of lastMatch.fixtures" >
+                    <table border="1" class="table">
+                        <tr >
+                            <th colspan="5">
+                                <b>Date: </b> {{season.date | date:'yyyy/MM/dd'}}
+                            </th>
+                        </tr>
+                        <tr>
+                            <td (click)="htoh(season._links.self.href)">{{season.homeTeamName}} :</td>
+                            <td>{{season.result.goalsHomeTeam}}</td>
+                            <td> vs </td>
+                            <td>{{season.result.goalsAwayTeam}}</td>
+                            <td>: {{season.awayTeamName}}</td>
+                        </tr>
+                    </table>
+                </div>
+            
+        </section>
+
+</section>
+<div *ngIf = "htohResult"> 
+<app-head-to-head [headtohead]="htohResult" class="grid-item"></app-head-to-head>
+</div>
