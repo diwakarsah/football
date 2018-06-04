@@ -24,7 +24,7 @@
 		</tbody>
 	</table>
 	</div>
-	<div class="date-match"  id="table-scroll">
+	<div class="date-match"  id="table-scroll" style="margin-bottom: 10px">
 		<div class="resultPanelRow table-responsive" *ngFor="let result of headtohead.head2head.fixtures">
 			<table class="table" border="1" >
 				<thead>
@@ -46,15 +46,41 @@
 			</table>
 	</div>
 	</div>
-
-	<ngx-charts-pie-chart *ngIf = "chartdata"
-      [view]="view"
+	</section>
+	
+	<section  >
+		
+	<h3> Charts </h3>
+	<div class="container" style="border: 1px solid; width: 80%; height: 33em">
+		<h4> Head to Head</h4>
+		<div style=" width: 80%">
+	<ngx-charts-pie-chart class="container"  *ngIf = "chartdata" 
+      
       [scheme]="colorScheme"
-      [results]="countryData"
+      [results]="resultData"
       [legend]="showLegend"
       [explodeSlices]="explodeSlices"
       [labels]="showLabels"
+      [legendTitle]="legendTitle"
       [doughnut]="doughnut"
       (select)="onSelect($event)">
     </ngx-charts-pie-chart>
+</div>
+</div>
+<div class="container" style="border: 1px solid; width: 80%; height: 33em; margin-top: 10px; ">
+	<h4 style="text-align: center;"> Last Match Result</h4>
+		<div style=" width: 80%">
+		    <ngx-charts-pie-chart class="container" *ngIf = "chartdata"
+		      
+		      [scheme]="colorScheme"
+		      [results]="lastMatchResult"
+		      [legend]="showLegend"
+		      [explodeSlices]="explodeSlices"
+		      [labels]="showLabels"
+		      [doughnut]="doughnut"
+		      (select)="onSelect($event)">
+		    </ngx-charts-pie-chart>
+		</div>
+</div>
+
 </section>

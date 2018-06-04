@@ -38,7 +38,8 @@
 <div *ngIf = "fixtures"> 
 <app-last-match [lastMatch]="fixtures" class="grid-item"></app-last-match>
 <app-performace [lastMatch]="fixtures" class="grid-item"></app-performace>
-<app-season [lastMatch]="fixtures" class="grid-item"></app-season>
+<app-season [lastMatch]="fixtures" [lastMatchResult]="lastMatchResult" class="grid-item"></app-season>
+
 
 <!--<section class="flex-container">  
         <section id="performance">

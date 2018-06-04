@@ -7,13 +7,15 @@ import { Component, OnInit,Input } from '@angular/core';
 })
 export class HeadToHeadComponent implements OnInit {
 @Input() headtohead = [];
+@Input() resultData = [];
+@Input() lastMatchResult = [];
 
 chartdata: boolean = false;
-countryData = [];
 
 //Chart
-view: any[] = [500, 300];
+view: any[] = [900, 300];
 showLegend = true;
+legendTitle: string = "Legend ";
 
 colorScheme = {
 domain: ['#5AA454', '#A10A28', '#C7B42C', '#AAAAAA']
@@ -23,22 +25,10 @@ explodeSlices = false;
 doughnut = false;
 
 
-  constructor() { }
+ constructor() { }
 
   ngOnInit() {
-  this.chartdata = true;
-  console.log(this.headtohead,"Head to Head object");
-    this.countryData = [];
-  this.countryData = [
-	  {
-	    "name": "Germany",
-	    "value": 8940000
-	  },
-	  {
-	    "name": "USA",
-	    "value": 5000000
-	  }
-	]
+  	this.chartdata = true;
   }
 
 }
