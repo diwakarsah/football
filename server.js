@@ -11,5 +11,6 @@ app.get('*', (req, res) => {
   console.log("error------"+req);
   res.sendFile(path.join(__dirname + '/dist/football/index.html'));
 });
+app.disable('etag');
   console.log("Console Log Listening");
 
