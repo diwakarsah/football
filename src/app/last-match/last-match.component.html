@@ -6,8 +6,8 @@
 
 	<section class="date-team">
 		
-		<div class="date"> <span>Date: </span><span> {{lastMatch.fixtures[(lastMatch.count)-1].date}}</span></div>
-		<div class="scoreboard">
+		<div class="date" *ngIf="lastMatch"> <span>Date: </span><span> {{lastMatch.fixtures[(lastMatch.count)-1].date}}</span></div>
+		<div class="scoreboard" *ngIf="lastMatch">
 			<span>
 				<span class="team-name"> {{lastMatch.fixtures[(lastMatch.count)-1].homeTeamName}}</span>
 				<span class="goals">{{lastMatch.fixtures[(lastMatch.count)-1].result.goalsHomeTeam}}</span>
