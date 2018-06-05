@@ -9,7 +9,7 @@ app.listen(process.env.PORT || 8080);
 
 app.get('*', (req, res) => {
   console.log("error------"+req);
-  res.sendFile(path.join(__dirname + '/dist/index.html'));
+  res.sendFile(path.join(__dirname + '/dist/football/index.html'));
 });
   console.log("Console Log Listening");
 
