@@ -24,7 +24,7 @@
 		</tbody>
 	</table>
 	</div>
-	<div class="date-match"  id="table-scroll" style="margin-bottom: 10px">
+	<div class="date-match"  id="table-scroll" style="margin-bottom: 10px" *ngIf="headtohead">
 		<div class="resultPanelRow table-responsive" *ngFor="let result of headtohead.head2head.fixtures">
 			<table class="table" border="1" >
 				<thead>
