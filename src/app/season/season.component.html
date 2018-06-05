@@ -1,7 +1,7 @@
  
 <section id="team" class="season-detail">
     <h4 > Season Performance</h4>
-<section  class="date-match" id="table-scroll">  
+<section  class="date-match" id="table-scroll" *ngIf="lastMatch">  
                 <div class="resultPanelRow table-responsive" *ngFor="let season of lastMatch.fixtures" >
                     <table border="1" class="table">
                         <tr >
