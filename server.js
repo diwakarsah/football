@@ -1,18 +1,15 @@
 const express = require('express');
-const http = require('https')
+const app = express();
 const path = require('path');
 
-const app = express();
+
 
 app.use(express.static(path.join(__dirname, 'dist')));
+app.listen(process.env.PORT || 8080);
 
-app.get('*', (req, res) => {
+app.get('/*', (req, res) => {
   console.log("error------"+req);
   res.sendFile(path.join(__dirname + '/dist/index.html'));
 });
+  console.log("Console Log Listening");
 
-const port = process.env.PORT || 3000;
-app.set('port', port);
-
-const server = http.createServer(app);
-server.listen(port, () => console.log('running'));
