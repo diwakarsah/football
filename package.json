@@ -30,7 +30,7 @@
     "@swimlane/ngx-charts": "^8.0.2",
     "chart.js": "^2.7.2",
     "core-js": "^2.5.4",
-    "express": "^4.16.1",
+    "express": "^4.17.3",
     "path": "^0.12.7",
     "foreman": "3.0.0",
     "ng-simple-slideshow": "^1.2.2",
